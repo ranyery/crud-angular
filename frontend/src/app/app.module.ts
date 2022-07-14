@@ -8,6 +8,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from "@angular/material/button";
 
 import { AppComponent } from "./app.component";
 import { FooterComponent } from "./components/template/footer/footer.component";
@@ -19,7 +20,7 @@ import { ProductCrudComponent } from "./views/product-crud/product-crud.componen
 
 import { RedDirective } from "./directives/red.directive";
 import { ForDirective } from "./directives/for.directive";
-import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductCreateComponent } from "./components/product/product-create/product-create.component";
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
