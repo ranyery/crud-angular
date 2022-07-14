@@ -27,3 +27,9 @@ export class ForDirective implements OnInit {
     // console.log("myForUsando", this.texto);
   }
 }
+
+// <span>
+//   <ul>
+//     <li *myFor="let n; em: [1, 2, 3]; usando: 'indice'">{{ n }}</li>
+//   </ul>
+// </span>
