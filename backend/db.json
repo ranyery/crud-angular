@@ -3,17 +3,22 @@
     {
       "id": 1,
       "name": "Caneta BIC",
-      "price": 5.49
+      "price": 5.59
     },
     {
       "id": 2,
       "name": "Macbook Pro",
-      "price": 12500
+      "price": 12497
     },
     {
       "id": 3,
       "name": "Galaxy S20+",
-      "price": 4597.97
+      "price": 4797.97
+    },
+    {
+      "id": 4,
+      "name": "Máquina de escrever",
+      "price": 1977
     }
   ]
 }
