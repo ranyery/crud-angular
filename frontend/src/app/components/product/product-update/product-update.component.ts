@@ -32,7 +32,7 @@ export class ProductUpdateComponent implements OnInit {
   public updateProduct(): void {
     this.productService.update(this.product).subscribe({
       next: () => {
-        this.productService.showMessage("🟡 Produto atualizado com sucesso!");
+        this.productService.showMessage("Produto atualizado com sucesso!");
         this.router.navigate(["/products"]);
       },
       error: (error) => {
