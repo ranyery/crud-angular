@@ -20,7 +20,7 @@ export class ProductCreateComponent implements OnInit {
   public createProduct() {
     this.productService.create(this.product).subscribe({
       next: () => {
-        this.productService.showMessage("Produto criado!");
+        this.productService.showMessage("Produto criado com sucesso!");
         this.router.navigate(["/products"]);
       },
       error: (error) => console.error(error),

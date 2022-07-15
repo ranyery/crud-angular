@@ -1,14 +1,14 @@
-import { ProductService } from "./../product.service";
-import { Product } from "./../product.model";
-import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
+import { ProductService } from "./../product.service";
+import { Component, OnInit } from "@angular/core";
+import { Product } from "../product.model";
 
 @Component({
-  selector: "app-product-update",
-  templateUrl: "./product-update.component.html",
-  styleUrls: ["./product-update.component.scss"],
+  selector: "app-product-delete",
+  templateUrl: "./product-delete.component.html",
+  styleUrls: ["./product-delete.component.scss"],
 })
-export class ProductUpdateComponent implements OnInit {
+export class ProductDeleteComponent implements OnInit {
   public product: Product = { name: "", price: 0 };
 
   constructor(
@@ -23,21 +23,17 @@ export class ProductUpdateComponent implements OnInit {
       next: (product: Product) => {
         this.product = product;
       },
-      error: (error) => {
-        console.error(error);
-      },
+      error: (error) => console.error(error),
     });
   }
 
-  public updateProduct(): void {
-    this.productService.update(this.product).subscribe({
+  public deleteProduct(): void {
+    this.productService.deleteById(this.product.id).subscribe({
       next: () => {
-        this.productService.showMessage("🟡 Produto atualizado com sucesso!");
+        this.productService.showMessage("🔴 Produto deletado com sucesso!");
         this.router.navigate(["/products"]);
       },
-      error: (error) => {
-        console.error(error);
-      },
+      error: (error) => console.error(error),
     });
   }
 
