@@ -11,10 +11,7 @@ import { ProductService } from "../product.service";
   styleUrls: ["./product-create.component.scss"],
 })
 export class ProductCreateComponent implements OnInit {
-  private product: Product = {
-    name: "",
-    price: 0,
-  };
+  public product: Product = { name: "", price: null };
 
   constructor(private productService: ProductService, private router: Router) {}
 
